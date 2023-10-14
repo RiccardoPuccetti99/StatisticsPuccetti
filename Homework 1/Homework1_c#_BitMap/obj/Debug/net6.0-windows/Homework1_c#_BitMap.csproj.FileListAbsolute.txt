@@ -1,0 +1,32 @@
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\bin\Debug\net6.0-windows\Homework1_c#_BitMap.exe
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\bin\Debug\net6.0-windows\Homework1_c#_BitMap.deps.json
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\bin\Debug\net6.0-windows\Homework1_c#_BitMap.runtimeconfig.json
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\bin\Debug\net6.0-windows\Homework1_c#_BitMap.dll
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\bin\Debug\net6.0-windows\Homework1_c#_BitMap.pdb
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c__BitMap.Form1.resources
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.csproj.GenerateResource.cache
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.AssemblyInfoInputs.cache
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.AssemblyInfo.cs
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.csproj.CoreCompileInputs.cache
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.dll
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\obj\Debug\net6.0-windows\refint\Homework1_c#_BitMap.dll
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.pdb
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.genruntimeconfig.cache
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework1_c#_BitMap\obj\Debug\net6.0-windows\ref\Homework1_c#_BitMap.dll
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\bin\Debug\net6.0-windows\Homework1_c#_BitMap.exe
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\bin\Debug\net6.0-windows\Homework1_c#_BitMap.deps.json
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\bin\Debug\net6.0-windows\Homework1_c#_BitMap.runtimeconfig.json
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\bin\Debug\net6.0-windows\Homework1_c#_BitMap.dll
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\bin\Debug\net6.0-windows\Homework1_c#_BitMap.pdb
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c__BitMap.Form1.resources
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.csproj.GenerateResource.cache
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.AssemblyInfoInputs.cache
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.AssemblyInfo.cs
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.csproj.CoreCompileInputs.cache
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.dll
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\obj\Debug\net6.0-windows\refint\Homework1_c#_BitMap.dll
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.pdb
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\obj\Debug\net6.0-windows\Homework1_c#_BitMap.genruntimeconfig.cache
+C:\Users\Riccardo\Documents\GitHub\StatisticsPuccetti\Homework 1\Homework1_c#_BitMap\obj\Debug\net6.0-windows\ref\Homework1_c#_BitMap.dll
