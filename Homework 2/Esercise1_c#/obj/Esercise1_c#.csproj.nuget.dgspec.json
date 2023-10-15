@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Riccardo\\Documents\\GitHub\\StatisticsPuccetti\\Esercise1_c#\\Esercise1_c#.csproj": {}
+    "C:\\Users\\Riccardo\\Documents\\GitHub\\StatisticsPuccetti\\Homework 2\\Esercise1_c#\\Esercise1_c#.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Riccardo\\Documents\\GitHub\\StatisticsPuccetti\\Esercise1_c#\\Esercise1_c#.csproj": {
+    "C:\\Users\\Riccardo\\Documents\\GitHub\\StatisticsPuccetti\\Homework 2\\Esercise1_c#\\Esercise1_c#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Riccardo\\Documents\\GitHub\\StatisticsPuccetti\\Esercise1_c#\\Esercise1_c#.csproj",
+        "projectUniqueName": "C:\\Users\\Riccardo\\Documents\\GitHub\\StatisticsPuccetti\\Homework 2\\Esercise1_c#\\Esercise1_c#.csproj",
         "projectName": "Esercise1_c#",
-        "projectPath": "C:\\Users\\Riccardo\\Documents\\GitHub\\StatisticsPuccetti\\Esercise1_c#\\Esercise1_c#.csproj",
+        "projectPath": "C:\\Users\\Riccardo\\Documents\\GitHub\\StatisticsPuccetti\\Homework 2\\Esercise1_c#\\Esercise1_c#.csproj",
         "packagesPath": "C:\\Users\\Riccardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Riccardo\\Documents\\GitHub\\StatisticsPuccetti\\Esercise1_c#\\obj\\",
+        "outputPath": "C:\\Users\\Riccardo\\Documents\\GitHub\\StatisticsPuccetti\\Homework 2\\Esercise1_c#\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Riccardo\\AppData\\Roaming\\NuGet\\NuGet.Config",

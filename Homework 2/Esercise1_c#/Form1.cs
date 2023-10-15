@@ -232,10 +232,10 @@ namespace Esercise1_c_
                     {
                         List<string> rowData = new()
                         {
-                            fields[14], // Age
-                            fields[16], // Height
-                            fields[5],  // Ambitious (0-5)
-                            fields[23]  // Dream Works
+                            fields[14].Trim(), // Age
+                            fields[16].Trim(), // Height
+                            fields[5].Trim(),  // Ambitious (0-5)
+                            fields[23].Trim()  // Dream Works
                         };
                         extractedData.Add(rowData);
                     }
