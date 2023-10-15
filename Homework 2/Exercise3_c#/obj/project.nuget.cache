@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TIrZPx3d0zYl1nLnsKsQlNny7o5ximpXt+hr8btMkDnNQN6Lnt4upXsiTtqDT6TMiLbI290ssOSQspw+An3J5g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Riccardo\\Documents\\GitHub\\StatisticsPuccetti\\Homework 2\\Exercise3_c#\\Exercise3_c#.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Riccardo\\.nuget\\packages\\winforms.datavisualization\\1.9.0\\winforms.datavisualization.1.9.0.nupkg.sha512"
+  ],
+  "logs": []
+}
