@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Homework1 Puccetti Riccardo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .btn-primary {
+            text-align: center;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center; padding-top: 20px;">Homework 2.1</h1>
+    <div style="display: flex; align-items: center; justify-content: center; padding-bottom: 50px;">
+        <input type="file" id="csvFileInput" accept=".csv">
+        <button class="btn btn-primary" onclick="compute()">Compute variables</button>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <div style="padding-right: 40px; padding-top: 30px" id="csvData"></div>
+        <div id="frequencyTables"></div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <div id="jointTables"></div>
+    </div>
+
+</body>
+</html>
+
+
+<script>
+    "use strict";
+
+    function myParser(csv) {
+        //work of Riccardo Puccetti. Do not copy and do not clone my repository
+        //questa funzione serve per controllare alcuni casi speciali in cui nel csv ci sono delle virgole all'interno di una cella
+        //se non venisse fatto il controllo, ogni virgola verrebbe considerata come una cella, producendo un output sbagliato
+        const rows = csv.split('\n');
+        const output = [];  //risultato che devo restituire
+
+        rows.forEach((row) => {
+            const columns = [];
+            let cella = '';  //questo è il contenuto temporaneo di ogni cella a cui vengono aggiungi i caratteri
+            let flag = false;  //questo flag mi permette di distinguere se una cella inizia o meno per "
+
+            for (let i = 0; i < row.length; i++) {
+                const char = row[i];
+
+                if (char === '"') {
+                    flag = !flag;   //se il carattere inizia per " significa che la cella contiene delle virgole che fanno parte del contenuto della cella stessa
+                } else if (char === ',' && !flag) {  //se si trova una virgola e il flag non è stato messo a true, la cella viene pushata normalmente
+                    columns.push(cella);
+                    cella = ''; //reset per la nuova cella
+                } else {
+                    cella += char; //il carattere viene aggiunto finchè non si incontra una virgola e la cella viene pushata
+                }
+            }
+
+            columns.push(cella);  //effettua una ulteriore push nel caso l'ultima cella non finisca con una virgola
+            output.push(columns);  
+        
+        });
+
+        return output;
+    }
+
+    function compute() {
+        const csvFileInput = document.getElementById("csvFileInput");
+        const csvDataContainer = document.getElementById("csvData");
+        const frequencyTablesContainer = document.getElementById("frequencyTables");
+        const jointTablesContainer = document.getElementById("jointTables");
+
+
+        const file = csvFileInput.files[0];
+
+        //work of Riccardo Puccetti. Do not copy and do not clone my repository
+
+        if (file) {   //serve per controllare se effettivamente un file è stato selezionato, altrimenti avrebbe valore null
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const csv = e.target.result;
+                const parsedData = myParser(csv);
+
+                let tableHtml = '<table class="table table-bordered table-striped">';
+                tableHtml += '<thead><tr><th>Age</th><th>Height</th><th>Ambitious (0-5)</th><th>Dream Works</th></tr></thead><tbody>';
+
+                for (let i = 1; i < parsedData.length; i++) {
+                    const row = parsedData[i];
+                    tableHtml += '<tr>';
+                    tableHtml += `<td>${row[14]}</td>`;
+                    tableHtml += `<td>${row[16]}</td>`;
+                    tableHtml += `<td>${row[5]}</td>`;
+                    tableHtml += `<td>${row[23]}</td>`;
+                    tableHtml += '</tr>';
+                }
+
+                tableHtml += '</tbody></table>';
+                csvDataContainer.innerHTML = tableHtml;
+
+
+                //con la funzione slice(1) si taglia la prima riga di header
+                //con map si seleziona per ogni riga la colonna corrispondente
+                //https://stackoverflow.com/questions/64755611/typescript-map-specific-columns-from-an-array
+                const ageData = parsedData.slice(1).map(row => row[14]);
+                const heightData = parsedData.slice(1).map(row => row[16]);
+                const ambitiousData = parsedData.slice(1).map(row => row[5]);
+                const dreamWorksData = parsedData.slice(1).map(row => row[23]);
+
+                const ageFrequency = calculateFrequency(ageData);
+                const heightFrequency = calculateFrequency(heightData);
+                const ambitiousFrequency = calculateFrequency(ambitiousData);
+                const dreamWorksFrequency = calculateFrequency(dreamWorksData);
+
+                const ageTable = createFrequencyTable("Age", ageFrequency);
+                const heightTable = createFrequencyTable("Height", heightFrequency);
+                const ambitiousTable = createFrequencyTable("Ambitious (0-5)", ambitiousFrequency);
+                const dreamWorksTable = createFrequencyTable("Dream Works", dreamWorksFrequency);
+
+                frequencyTablesContainer.innerHTML = ageTable + heightTable + ambitiousTable + dreamWorksTable;
+
+
+                //per la joint distribution
+                const jointDistribution = calculateJointDistribution(parsedData);
+                const jointTable = createJointDistributionTable(jointDistribution);
+
+                jointTablesContainer.innerHTML = jointTable;
+            };
+
+            reader.readAsText(file);
+        }
+    }
+
+    function calculateFrequency(data) {
+        const frequency = {};  //dizionario
+        data.forEach(value => {
+            frequency[value] = (frequency[value] || 0) + 1;  //cerca se la chiave value già esiste e in caso contrario la inizializza a 0
+        });
+        return frequency;
+    }
+
+    function createFrequencyTable(variableName, frequency) {
+        //work of Riccardo Puccetti. Do not copy and do not clone my repository
+        let tableHtml = `<h2>${variableName} Frequency Distribution</h2>`;
+        tableHtml += '<table class="table table-bordered">';
+        tableHtml += '<thead><tr><th>Value</th><th>Absolute Frequency</th><th>Relative Frequency</th><th>Percentage</th></tr></thead><tbody>';
+
+        //Object.values(frequency) estrae i valori dal dizionario delle frequenze
+        //con la funzione reduce si sommano facilmente i valori all'interno dell'array
+        //acc è l'accumulatore, val è il valore corrente della cella e 0 corrisponde al valore inizializzato dell'accumulatore
+        //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+        const total = Object.values(frequency).reduce((acc, val) => acc + val, 0);
+
+        //come iterare un dizionario in javascript
+        //https://masteringjs.io/tutorials/fundamentals/foreach-object
+        Object.entries(frequency).forEach(([value, count]) => {
+            const relativeFrequency = count / total;
+            const percentage = (relativeFrequency * 100).toFixed(2);
+            tableHtml += `<tr><td>${value}</td><td>${count}</td><td>${relativeFrequency.toFixed(2)}</td><td>${percentage}%</td></tr>`;
+        });
+
+        tableHtml += '</tbody></table>';
+        return tableHtml;
+    }
+
+
+
+    function calculateJointDistribution(data) {
+        const jointDistribution = {};
+        data = data.slice(1);
+
+        data.forEach(row => {
+            const age = row[14]; 
+            const ambitious = row[5];
+            const key = age + '-' + ambitious;
+
+            if (jointDistribution[key]) {
+                jointDistribution[key]++;
+            } else {
+                jointDistribution[key] = 1;
+            }
+        });
+
+        return jointDistribution;
+    }
+
+
+    function createJointDistributionTable(jointDistribution) {
+        let tableHtml = '<h2>Joint Distribution of Age and Ambitious</h2>';
+        tableHtml += '<table class="table table-bordered">';
+        tableHtml += '<thead><tr><th>Age-Ambitious (0-5)</th><th>Frequency</th></tr></thead><tbody>';
+
+
+        for (const key in jointDistribution) {
+            if (jointDistribution.hasOwnProperty(key)) {
+                const [age, ambitious] = key.split('-');
+                const frequency = jointDistribution[key];
+
+                tableHtml += `<tr><td>${age}-${ambitious}</td><td>${frequency}</td></tr>`;
+            }
+        }
+
+        tableHtml += '</tbody></table>';
+        return tableHtml;
+    }
+</script>
+
+
+
