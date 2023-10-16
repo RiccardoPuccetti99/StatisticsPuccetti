@@ -50,14 +50,14 @@
                 if (char === '"') {
                     flag = !flag;   //se il carattere inizia per " significa che la cella contiene delle virgole che fanno parte del contenuto della cella stessa
                 } else if (char === ',' && !flag) {  //se si trova una virgola e il flag non è stato messo a true, la cella viene pushata normalmente
-                    columns.push(cella);
+                    columns.push(cella.trim());
                     cella = ''; //reset per la nuova cella
                 } else {
                     cella += char; //il carattere viene aggiunto finchè non si incontra una virgola e la cella viene pushata
                 }
             }
 
-            columns.push(cella);  //effettua una ulteriore push nel caso l'ultima cella non finisca con una virgola
+            columns.push(cella.trim());  //effettua una ulteriore push nel caso l'ultima cella non finisca con una virgola
             output.push(columns);  
         
         });
